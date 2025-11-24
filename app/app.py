@@ -14,7 +14,7 @@ st.set_page_config(page_title="Marketing Decision Tool", layout="wide", page_ico
 # --- CHARGEMENT DONNÉES ---
 @st.cache_data
 def get_data():
-    return load_and_prepare_data('data/data_clean.csv')
+    return load_and_prepare_data('app/data/data_clean.csv')
 
 try:
     df_raw = get_data()
