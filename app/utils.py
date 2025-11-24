@@ -9,7 +9,7 @@ def load_and_prepare_data(file_path):
         df = pd.read_csv(file_path, parse_dates=['InvoiceDate'])
     except FileNotFoundError:
         # Si on lance depuis le dossier app/, le chemin change
-        df = pd.read_csv('data_clean.csv', parse_dates=['InvoiceDate'])
+        df = pd.read_csv('app/data/data_clean.csv', parse_dates=['InvoiceDate'])
     
     # Standardisation des colonnes basées sur votre fichier data_clean.csv
     df.rename(columns={

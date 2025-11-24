@@ -17,7 +17,7 @@ st.markdown("Outil d'aide à la décision pour piloter la rétention et la valeu
 @st.cache_data
 def get_data():
     # Le chemin part de la racine où on lance "streamlit run"
-    return load_and_prepare_data('data/data_clean.csv')
+    return load_and_prepare_data('app/data/data_clean.csv')
 
 try:
     df_raw = get_data()
