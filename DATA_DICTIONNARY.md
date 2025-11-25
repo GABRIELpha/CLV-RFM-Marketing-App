@@ -1,13 +1,13 @@
 # Dictionnaire des Données - Projet Online Retail
 
-Ce document décrit les variables présentes dans les fichiers de données utilisés par l'application Streamlit (`processed_data.csv` ou `rfm_table.csv`).
+Ce document décrit les variables présentes dans les fichiers de données utilisés par l'application Streamlit (`processed_data.csv`).
 
 ## 1. Données Transactionnelles (Brutes & Nettoyées)
 *Source : Online Retail II (UCI)*
 
 | Variable | Type | Description | Règles de gestion / Nettoyage |
 | :--- | :--- | :--- | :--- |
-| **InvoiceNo** | String | Identifiant unique de la transaction | Les factures commençant par 'C' (Annulations) ont été traitées/exclues selon le filtre. |
+| **InvoiceNo** | String | Identifiant unique de la transaction | Les factures commençant par 'C' (Annulations) ont été traitées/exclues. |
 | **StockCode** | String | Code unique du produit | |
 | **Description** | String | Libellé du produit | |
 | **Quantity** | Integer | Quantité de produits achetés | Les quantités négatives (retours) sont conservées mais flaggées. |
@@ -22,7 +22,7 @@ Ce document décrit les variables présentes dans les fichiers de données utili
 | Variable | Type | Description | Formule / Logique |
 | :--- | :--- | :--- | :--- |
 | **TotalAmount** | Float | Montant total de la ligne (£) | `Quantity * UnitPrice` |
-| **InvoiceMonth** | String | Mois de la transaction | Format YYYY-MM (pour les agrégations temporelles) |
+| **InvoiceMonth** | String | Mois de la transaction | Format YYYY-MM |
 | **CohortMonth** | Date | Mois de la toute première commande du client | Utilisé pour l'analyse de rétention |
 | **CohortIndex** | Integer | Nombre de mois écoulés depuis la première commande | 0 = mois d'acquisition, 1 = mois suivant, etc. |
 
