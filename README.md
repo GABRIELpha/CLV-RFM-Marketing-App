@@ -65,7 +65,7 @@ L'architecture du projet est organisée comme suit :
 ├── README.md               # Ce fichier
 ├── requirements.txt        # Liste des dépendances Python
 ├── notebooks/
-│   └── 01_exploration.ipynb  # Notebook : Exploration & Génération du CSV nettoyé
+│   └── exploration_données.ipynb  # Notebook : Exploration & Génération du CSV nettoyé
 ├── app/
 │   ├── app.py              # Application Streamlit principale
 │   ├── utils.py            # Fonctions utilitaires (nettoyage, calculs RFM, CLV)
